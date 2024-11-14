@@ -1,0 +1,25 @@
+header{
+    background-color: #001741;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;          /* Prend toute la hauteur de l'écran */
+    width: 200px;            /* Largeur de la barre de navigation */
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    border: solid;
+    border-width: 1px 0px 1px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+li{
+    list-style: none;
+}
