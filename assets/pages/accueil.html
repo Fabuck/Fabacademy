@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page d'accueil</title>
-    <link rel="stylesheet" href="/assets/style/accueil.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/accueil.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>Role</h1>
-            <h2>nom,rôle</h2>
-            <ul>
-                <li>Home</li>
-                <li>Promotions</li>
-                <li>Ajouter promotion</li>
-                <li>Options</li>
-            </ul>
-        </nav>
+      <div id="toggle-btn" onclick="toggleHeader()">⇦</div>
+      <div class="role">
+        <img src="" alt="role" />
+        <h1>Role</h1>
+      </div>
+
+      <div class="nomRole">
+        <img src="" alt="photo" />
+        <h2>nom,rôle</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <div>
+              <img class="navImg" src="../img/home.png" alt="icon" />
+              <p>Accueil</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img class="navImg" src="../img/promo.png" alt="icon" />
+              <p>Promotions</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img class="navImg" src="../img/student.png" alt="icon" />
+              <p>Élèves</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
-    
-</body>
+    <script>
+      function toggleHeader() {
+        document.querySelector("header").classList.toggle("collapsed");
+      }
+    </script>
+  </body>
 </html>
