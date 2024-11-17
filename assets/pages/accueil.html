@@ -7,17 +7,9 @@
     <link rel="stylesheet" href="../style/accueil.css" />
   </head>
   <body>
-    <header>
+    <header class="collapsed">
       <div id="toggle-btn" onclick="toggleHeader()">⇦</div>
-      <div class="role">
-        <img src="" alt="role" />
-        <h1>Role</h1>
-      </div>
 
-      <div class="nomRole">
-        <img src="" alt="photo" />
-        <h2>nom,rôle</h2>
-      </div>
       <nav>
         <ul>
           <li>
@@ -41,10 +33,32 @@
         </ul>
       </nav>
     </header>
-    <script>
-      function toggleHeader() {
-        document.querySelector("header").classList.toggle("collapsed");
-      }
-    </script>
+    <main>
+      <section class="promos">
+        <article class="last" onclick="btnAjouter()">
+          <p>Ajouter promo</p>
+        </article>
+        <article class="modal-overlay hidden">
+          <div class="modalAjout">
+            <div>
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" />
+            </div>
+            <div>
+              <label for="date-debut">Date de début :</label>
+              <input type="date" id="date-debut" />
+            </div>
+            <div>
+              <label for="date-fin">Date de fin :</label>
+              <input type="date" id="date-fin" />
+            </div>
+            <div>
+              <button class="valider" onclick="addPromo()">Valider</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="../script/script.js"></script>
   </body>
 </html>

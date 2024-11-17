@@ -3,6 +3,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* /////////////////////////////////Header////////////////////////////////////////// */
 header {
   background: linear-gradient(
     to top,
@@ -76,4 +77,240 @@ ul {
 
 .collapsed {
   transform: translateX(-100%);
+}
+
+/* /////////////////////////////////Accueil Promo ////////////////////////////////////////// */
+
+/* .promos {
+  display: flex;
+  gap: 2%;
+  padding-left: 3%;
+  background-color: rgb(255, 255, 255)
+}
+
+.elevesDiv {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.elevesDiv img {
+  width: 15%;
+}
+
+.promos article {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border: solid;
+  width: 33%;
+  text-align: center;
+  align-items: center;
+}
+
+.promos article div div {
+  display: flex;
+  gap: 10px;
+
+
+}
+
+.calendar{
+  width: 15%;
+} */
+
+/* Styles généraux */
+body {
+  background-color: #f9f9f9; /* Fond clair et neutre */
+  color: #333; /* Texte bien lisible */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Section des promotions */
+.promos {
+  display: flex;
+
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+/* Article général */
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff; /* Fond blanc */
+  border: 1px solid #ddd; /* Bordure discrète */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  width: 15%;
+  border-radius: 25px 25px 0px 0px;
+  border-radius: 25px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding-left: 50;
+}
+
+article:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* "Ajouter promo" */
+article:first-child p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0078d7; /* Bleu moderne */
+  cursor: pointer;
+}
+
+article:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #0078d7;
+  background-color: #f0f8ff;
+}
+
+/* Titre des promotions */
+article h2 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  background-color: #393e46;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 25px 25px 0px 0px;
+}
+
+/* Élément div interne */
+.elevesDiv {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.elevesDiv img {
+  width: 20px;
+  height: 20px;
+}
+
+.calendar {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.elevesDiv div,
+.calendar + div > div {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Dates */
+.calendar + div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.calendar + div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.last {
+  order: 15;
+}
+
+.btnDiv {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  padding-bottom: 15px;
+}
+
+.supprimer,
+.modifier,
+.details,
+.valider {
+  color: white;
+  border-radius: 25px;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 7px;
+}
+
+.supprimer {
+  background-color: #ff6b6b;
+}
+
+.modifier {
+  background-color: #ffa502;
+}
+
+.details {
+  background-color: #1e90ff;
+}
+
+.valider {
+  background-color: #4caf50;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+}
+
+.modalAjout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px; 
+  gap: 15px;
+  width: 15%; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
