@@ -1,0 +1,368 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: beige !important;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* /////////////////////////////////Header////////////////////////////////////////// */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #393e46; 
+  color: #ffffff; 
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  color: #1e90ff;
+}
+
+@media (max-width: 1280px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start; /* Aligner au début */
+    justify-content: flex-start;
+    height: 100vh; /* Prendre toute la hauteur */
+    width: 200px; /* Largeur fixe pour le menu vertical */
+    position: fixed; /* Fixer sur la gauche */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    gap: 20px; /* Espacement entre les éléments */
+  }
+
+  header h1 {
+    font-size: 20px; /* Réduit légèrement la taille */
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column; /* Navigation verticale */
+    gap: 15px; /* Espacement entre les liens */
+  }
+
+  header nav a {
+    font-size: 18px; /* Taille lisible pour les tablettes */
+    word-wrap: break-word; /* Force un retour à la ligne si nécessaire */
+  }
+
+  /* Ajout d'un espacement au contenu principal pour éviter un chevauchement */
+  main {
+    margin-left: 220px; /* Décale le contenu pour laisser la place au header */
+  }
+
+  .promos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo {
+    min-width: 35%;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start; /* Aligner au début */
+    justify-content: flex-start;
+    height: 100vh; /* Prendre toute la hauteur */
+    width: 100px; /* Largeur fixe pour le menu vertical */
+    position: fixed; /* Fixer sur la gauche */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    gap: 20px; /* Espacement entre les éléments */
+  }
+
+  header h1 {
+    font-size: 20px; /* Réduit légèrement la taille */
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column; /* Navigation verticale */
+    gap: 15px; /* Espacement entre les liens */
+  }
+
+  header nav a {
+    font-size: 18px; /* Taille lisible pour les tablettes */
+    word-wrap: break-word; /* Force un retour à la ligne si nécessaire */
+  }
+
+  /* Ajout d'un espacement au contenu principal pour éviter un chevauchement */
+  main {
+    margin-left: 220px; /* Décale le contenu pour laisser la place au header */
+  }
+
+  .promos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo {
+    min-width: 75%;
+  }
+
+  .modalAjout {
+    min-width: 40%;
+  }
+
+  .btnDiv{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+   margin: auto;
+  }
+
+  .date{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .elevesDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px !important ; 
+  }
+}
+
+/* /////////////////////////////////Accueil Promo ////////////////////////////////////////// */
+
+
+/* Styles généraux */
+
+main {
+  padding: 20px;
+}
+
+/* Section des promotions */
+.promos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: space-evenly;
+}
+
+/* Article général */
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  width: 25%;
+  border-radius: 25px 25px 0px 0px;
+  border-radius: 25px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding-left: 50;
+}
+
+article:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* "Ajouter promo" */
+article:first-child p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0078d7; /* Bleu moderne */
+  cursor: pointer;
+}
+
+article:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #0078d7;
+  background-color: #f0f8ff;
+}
+
+/* Titre des promotions */
+article h2 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  background-color: #393e46;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 25px 25px 0px 0px;
+}
+
+/* Élément div interne */
+.elevesDiv {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.elevesDiv img {
+  width: 20px;
+  height: 20px;
+}
+
+.calendar {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.elevesDiv div,
+.calendar + div > div {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Dates */
+.calendar + div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.calendar + div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.last {
+  order: 15;
+}
+
+.btnDiv {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  padding-bottom: 15px;
+}
+
+.supprimer,
+.modifier,
+.details,
+.valider,
+.valider {
+  color: white;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+}
+
+.supprimer {
+  background-color: #ff6b6b;
+}
+
+.modifier {
+  background-color: #ffa502;
+}
+
+.details {
+  background-color: #1e90ff;
+}
+
+.valider {
+  background-color: #4caf50;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalAjout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  gap: 15px;
+  width: 15%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+article input {
+  width: 85%;
+}
+
+.modifierNom {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  background-color: #393e46;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 25px 25px 0px 0px;
+  width: 98%;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="../style/accueil.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Gestion des Promotions</h1>
+
+      <nav>
+        <a href="./accueil.html">Promotions</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="promos">
+        <article class="last" onclick="btnAjouter()">
+          <p>Ajouter promo</p>
+        </article>
+      </section>
+      <article class="modal-overlay hidden">
+        <div class="modalAjout">
+          <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" />
+          </div>
+          <div>
+            <label for="date-debut">Date de début :</label>
+            <input type="date" id="date-debut" />
+          </div>
+          <div>
+            <label for="date-fin">Date de fin :</label>
+            <input type="date" id="date-fin" />
+          </div>
+          <div>
+            <button class="valider" onclick="addPromo()">Valider</button>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="../script/script.js"></script>
+  </body>
+</html>

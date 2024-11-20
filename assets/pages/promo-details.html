@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/promos-details.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gestion des Promotions</h1>
+
+      <nav>
+        <a href="./accueil.html">Promotions</a>
+      </nav>
+    </header>
+    <main>
+    <section>
+      <article class="infoPromo">
+        <h2 class="nomPromo">Test</h2>
+
+        <div class="date">
+          <div><img src="../img/calendar.png" class="calendar" alt="icon_calendar" /></div>
+          <div>
+            <div>Date de début</div>
+            <div class="start">2024-11-19</div>
+          </div>
+          <div>
+            <div>Date de fin</div>
+            <div class="end" >2024-11-27</div>
+          </div>
+        </div>
+        <div class="nbrEleves">
+            <img src="../img/student.png" alt="icon_student">
+          <p>Nombres d'élèves :</p>
+          <p class="nbr">0</p>
+        </div>
+        
+
+        <section class="listeEleves">
+        <div class="headerEleves">
+            <div>Nom</div>
+            <div>Prénom</div>
+            <div>Age</div>
+            <div>Modifier</div>
+            <div>Supprimer</div>
+        </div>
+        <button class="details" onclick="btnAjouter()">Ajouter</button>
+    </section>
+        <div class="btnDiv">
+          <button class="supprimer">Supprimer promo</button
+          ><button class="modifier">Modifier promo</button>
+        </div>
+      </article>
+    </section>
+    <article class="modal-overlay suppression hidden ">
+        <div class="modalAjout">
+         Êtes vous sur de vouloir supprimer ? 
+            <button class="validerSup" >Valider</button>
+          </div>
+        
+      </article>
+  <article class="modal-overlay hidden ajouter">
+        <div class="modalAjout">
+          <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" />
+          </div>
+          <div>
+            <label for="date-debut">Prénom : </label>
+            <input type="text" id="prenom" />
+          </div>
+          <div>
+            <label for="date-fin">Age : </label>
+            <input type="text" id="age" />
+          </div>
+          <div>
+            <button class="valider" onclick="addEleve()">Valider</button>
+          </div>
+        </div>
+      </article>
+      </main>
+    <script src="../script/promos-details.js"></script>
+  </body>
+
+</html>

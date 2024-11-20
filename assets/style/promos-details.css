@@ -1,0 +1,253 @@
+/* ///////////////Header///////////////////////////////////////
+ */
+
+body {
+  margin: 0;
+  background-color: beige !important;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #393e46;
+  color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  color: #1e90ff;
+}
+
+/* ////////////////////////////////Main//////////////////////////////////////// */
+main {
+  padding-top: 50px;
+}
+
+.nbrEleves {
+  display: flex;
+  width: 35%;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.date {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 35%;
+  font-size: 20px;
+}
+
+.date > div:nth-child(2) {
+  border-right: solid;
+  border-color: #333;
+  border-width: 1px;
+  padding-right: 15px;
+}
+
+.btnDiv {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.supprimer,
+.modifier,
+.details,
+.valider,
+.validerSup,
+.validerModif {
+  color: white;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+}
+
+.supprimer {
+  background-color: #ff6b6b;
+}
+
+.modifier {
+  background-color: #ffa502;
+}
+
+.details {
+  background-color: #1e90ff;
+  order: 15;
+  padding: 0px;
+}
+
+.valider,
+.validerSup,
+.validerModif {
+  background-color: #4caf50;
+}
+
+.valider {
+  width: 100%;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  width: 35%;
+  margin: auto;
+  align-items: center;
+  border-radius: 25px;
+  gap: 35px;
+}
+
+h2 {
+  background-color: #333;
+  color: white;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.infoPromo {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  width: 45%;
+  border-radius: 25px 25px 0px 0px;
+  border-radius: 25px;
+  padding-left: 50;
+}
+
+.headerEleves {
+  display: flex;
+  gap: 45px;
+  border: solid;
+  border-width: 1px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.headerEleves div {
+  border-width: 1px;
+  text-align: center;
+}
+
+.listeEleves {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+}
+
+.listeEleves div {
+  width: 100%;
+}
+
+.eleve {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalAjout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  gap: 15px;
+  width: 15%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.eleve input {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .infoPromo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .infoPromo {
+    width: 80%;
+  }
+
+  .headerEleves {
+    gap: 10px;
+  }
+
+  .date,
+  .nbrEleves {
+    width: 80%;
+    font-size: 15px;
+  }
+
+ 
+  .date img {
+    width: 50%;
+  }
+
+  .nbrEleves img {
+    width: 8%;
+  }
+}

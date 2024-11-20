@@ -1,0 +1,83 @@
+html,
+body {
+  background-color: #dcdcda;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+main {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  min-height: 100vh;
+  width: 100%; /* Prend toute la largeur pour éviter les décalages */
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  padding: 35px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-width: 1px 0px 1px 1px;
+  box-sizing: border-box;
+  background-color: #e0f7ff;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #030301;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1b2529;
+}
+
+.inputLog {
+  display: flex;
+}
+
+.loginImg {
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-width: 1px 1px 1px 0px;
+  box-sizing: border-box;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.loginImg img {
+  width: 100%;
+}
+
+.inputLog input {
+  border-radius: 5px 0px 0px 5px;
+}
