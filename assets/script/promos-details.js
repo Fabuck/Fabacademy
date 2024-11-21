@@ -355,3 +355,8 @@ document.querySelector(".validerSup").addEventListener("click", () => {
 
 getPromo();
 getPromoById(data);
+
+
+
+
+/////////////////////TEST IMG ////////////////////////
